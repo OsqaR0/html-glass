@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    background: linear-gradient(45deg ,aquamarine, black);
+    overflow: hidden;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 66%;
+    height: 66%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(45deg, rgba(127, 255, 212, 0.25), rgba(0, 0, 0, 0.75));
+    padding: 32px 92px;
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+
+.bg_img {
+    position: absolute;
+}
+
+.bg_button {
+    top: 0;
+    right: 50%;
+    height: 30vh;
+    animation: slideDown 5s linear infinite;
+}
+
+.bg_dots {
+    top: 0;
+    left: 50%;
+    height: 75vh;
+    animation: rotate 25s linear infinite;
+}
+
+.bg_logo {
+    left: 0;
+    top: 50%;
+    width: 50%;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    padding-bottom: 12px;
+    font-size: 48px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a {
+    color: aquamarine;
+    text-decoration: none;
+    position: relative;
+}
+
+.link_border {
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: aquamarine;
+    background: linear-gradient(90deg, transparent, aquamarine);
+    transition: width 0.3s;
+}
+
+a:hover .link_border{
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-30vh)}
+    to {transform: translateY(100vh)}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
